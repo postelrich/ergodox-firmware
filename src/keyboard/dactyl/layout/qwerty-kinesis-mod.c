@@ -30,17 +30,17 @@ const uint8_t PROGMEM _kb_layout[KB_LAYERS][KB_ROWS][KB_COLUMNS] = {
       _esc,     _A,     _S,          _D,      _F,    _G,
       _guiL,    _Z,     _X,          _C,      _V,    _B,
       _ctrlL,   _grave, _backslash,  _bracketL, _bracketR,
-                                                    _del,   _home,
-                                                            _end,
+                                                    _shiftL, _esc,
+                                                            _guiL,
                                             _space,   _bs,  _ctrlL,
 // right hand
            _6,      _7,      _8,      _9,         _0,     _dash,
-           _Y,      _U,      _I,      _O,         _P, _bracketL,
+           _Y,      _U,      _I,      _O,         _P, _equal,
            _H,      _J,      _K,      _L, _semicolon,    _dash,
-           _N,      _M,  _comma, _period,     _quote,   _shiftR,
+           _N,      _M,  _comma, _period,     _quote,   _slash,
                _arrowL, _arrowD, _arrowU,    _arrowR,    _ctrlR,
- _altR,  _shiftR,
-_pageU,
+ _tab,  _shiftR,
+_guiR,
 _ctrlR, _enter, _space ),
 
 
