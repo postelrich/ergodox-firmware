@@ -38,7 +38,7 @@ const uint8_t PROGMEM _kb_layout[KB_LAYERS][KB_ROWS][KB_COLUMNS] = {
            _Y,      _U,      _I,      _O,         _P, _equal,
            _H,      _J,      _K,      _L, _semicolon,    _dash,
            _N,      _M,  _comma, _period,     _quote,   _slash,
-               _arrowL, _arrowD, _arrowU,    _arrowR,    _ctrlR,
+               _arrowL, _arrowD, _arrowU,    _arrowR,    1,
  _tab,  _shiftR,
 _guiR,
 _ctrlR, _enter, _space ),
@@ -170,7 +170,7 @@ NULL,
  kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
  kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
  kprrel, kprrel, kprrel, kprrel, kprrel,
-                                                 s2kcap, kprrel,
+                                                 kprrel, kprrel,
                                                          kprrel,
                                          kprrel, kprrel, kprrel,
 // right hand
@@ -179,7 +179,7 @@ NULL,
                  kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
                  kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
                          kprrel, kprrel, kprrel, kprrel, ltog1,
- kprrel, s2kcap,
+ kprrel, kprrel,
  kprrel,
  kprrel, kprrel, kprrel ),
 
@@ -236,28 +236,27 @@ NULL,
 
 const void_funptr_t PROGMEM _kb_layout_release[KB_LAYERS][KB_ROWS][KB_COLUMNS] = {
 
-	KB_MATRIX_LAYER(  // release: layer 0: default
+	KB_MATRIX_LAYER(  // press: layer 0: default
 // unused
 NULL,
 // left hand
  kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
  kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
  kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
- s2kcap, kprrel, kprrel, kprrel, kprrel, kprrel,
+ kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
  kprrel, kprrel, kprrel, kprrel, kprrel,
-                                                  lpop1, kprrel,
+                                                 kprrel, kprrel,
                                                          kprrel,
                                          kprrel, kprrel, kprrel,
 // right hand
-                kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
-                kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
-                kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
-                kprrel, kprrel, kprrel, kprrel, kprrel, s2kcap,
-                        kprrel, kprrel, kprrel, kprrel, kprrel,
+                 kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
+                 kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
+                 kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
+                 kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
+                         kprrel, kprrel, kprrel, kprrel, ltog1,
  kprrel, kprrel,
  kprrel,
  kprrel, kprrel, kprrel ),
-
 
 	KB_MATRIX_LAYER(  // release: layer 1: function and symbol keys
 // unused
