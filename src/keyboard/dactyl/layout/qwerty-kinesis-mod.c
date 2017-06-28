@@ -26,9 +26,9 @@ const uint8_t PROGMEM _kb_layout[KB_LAYERS][KB_ROWS][KB_COLUMNS] = {
 0,
 // left hand
       _esc,     _1,     _2,          _3,      _4,    _5,
-      _tab,     _Q,     _W,          _E,      _R,    _T,
-      _esc,     _A,     _S,          _D,      _F,    _G,
-      _guiL,    _Z,     _X,          _C,      _V,    _B,
+      _home,     _Q,     _W,          _E,      _R,    _T,
+      _end,     _A,     _S,          _D,      _F,    _G,
+      _del,    _Z,     _X,          _C,      _V,    _B,
       _ctrlL,   _grave, _backslash,  _bracketL, _bracketR,
                                                     _shiftL, _esc,
                                                             _guiL,
@@ -144,6 +144,7 @@ _ctrlR, _enter, _space ),
 #define  lpop8    &kbfun_layer_pop_8
 #define  lpop9    &kbfun_layer_pop_9
 #define  lpop10   &kbfun_layer_pop_10
+#define  ltog1    &kbfun_layer_toggle_1
 // ---
 
 // device
@@ -176,8 +177,8 @@ NULL,
                  kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
                  kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
                  kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
-                 kprrel, kprrel, kprrel, kprrel, kprrel, s2kcap,
-                         kprrel, kprrel, kprrel, kprrel, kprrel,
+                 kprrel, kprrel, kprrel, kprrel, kprrel, kprrel,
+                         kprrel, kprrel, kprrel, kprrel, ltog1,
  kprrel, kprrel,
  kprrel,
  kprrel, kprrel, kprrel ),
@@ -200,33 +201,10 @@ NULL,
                 ktrans, ktrans, ktrans, ktrans, ktrans, ktrans,
                 ktrans, ktrans, ktrans, ktrans, ktrans, ktrans,
                 ktrans, ktrans, ktrans, ktrans, ktrans, ktrans,
-                        ktrans, ktrans, ktrans, ktrans, ktrans,
+                        ktrans, ktrans, ktrans, ktrans, ltog1,
  ktrans, ktrans,
  ktrans,
  ktrans, ktrans, ktrans ),
-
-
-	KB_MATRIX_LAYER(  // press: layer 2: keyboard functions
-// unused
-NULL,
-// left hand
- dbtldr,   NULL,   NULL,   NULL,   NULL,   NULL,
-   NULL,   NULL,   NULL,   NULL,   NULL,   NULL,
-   NULL,   NULL,   NULL,   NULL,   NULL,   NULL,
-   NULL,   NULL,   NULL,   NULL,   NULL,   NULL,
-   NULL,   NULL,   NULL,   NULL,   NULL,
-                                                   NULL,   NULL,
-                                                           NULL,
-                                           NULL,   NULL,   NULL,
-// right hand
-                  NULL,   NULL,   NULL,   NULL,   NULL,   NULL,
-                  NULL,   NULL,   NULL,   NULL,   NULL,   NULL,
-                  NULL,   NULL,   NULL,   NULL,   NULL,   NULL,
-                  NULL,   NULL,   NULL,   NULL,   NULL,   NULL,
-                          NULL,   NULL,   NULL,   NULL,   NULL,
-   NULL,   NULL,
-   NULL,
-   NULL,   NULL,   NULL ),
 
 
 	KB_MATRIX_LAYER(  // press: layer 3: numpad
@@ -237,7 +215,7 @@ NULL,
  ktrans, ktrans, kprrel, ktrans, ktrans, ktrans,
  ktrans, kprrel, kprrel, kprrel, ktrans, ktrans,
  ktrans, ktrans, ktrans, ktrans, ktrans, ktrans,
- ktrans, ktrans, ktrans, ktrans, ktrans,
+ lpop2, ktrans, ktrans, ktrans, ktrans,
                                                  ktrans,slponum,
                                                          ktrans,
                                          ktrans, ktrans, ktrans,
@@ -246,7 +224,7 @@ NULL,
                 ktrans, kprrel, kprrel, kprrel, kprrel, ktrans,
                 ktrans, kprrel, kprrel, kprrel, kprrel, ktrans,
                 ktrans, kprrel, kprrel, kprrel, kprrel, ktrans,
-                        kprrel, kprrel, kprrel, kprrel, ktrans,
+                        kprrel, kprrel, kprrel, kprrel, ,
  ktrans, ktrans,
  ktrans,
  ktrans, ktrans, kprrel ),
